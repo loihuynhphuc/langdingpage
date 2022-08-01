@@ -1,0 +1,131 @@
+@media only screen and (max-width: 1023px){
+    #main{
+        overflow: hidden;
+    }
+    .hide-on-tablet-mobile{
+        display: none;
+    }
+    .nextwork-brand__img,
+    .nextwork__img,
+    .advertise__box-img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .work-box{
+        display: none;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .plan-container__item{
+        width: 100%;
+    }
+    .plan-container__item:not(:first-child){
+        margin-top: 50px;
+    }
+    .btn--bacg{
+        padding: 20px 70px;
+    }
+    .subcribe{
+        padding: 45px 40px;
+    }
+    .subcribe-des__head{
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+    .header-logo{
+        margin-right: 0;
+    }
+   .show-on-mobile-tablet{
+       display: block;
+   }
+}
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .banner__left{
+        padding-top: 70px;
+    }
+    .header-logo__img{
+        width: 220px;
+    }
+    .navigation-container{
+        width: 400px;
+    }
+}
+/* mobile */
+@media (max-width: 739px){
+    .header{
+        padding: 30px 15px 0px 15px;
+    }
+    .banner__info-heading,
+    .advertise__content-title,
+    .plan__head-title,
+    .slide-header__titile{
+        font-size: 2.5rem;
+        line-height: 4rem;
+    }
+    .banner{
+        padding-top: 0;
+    }
+    /* .nextwork__img{
+        margin-top: 0;
+    } */
+    .btn--bacg{
+        margin-top: 10px;
+    }
+    .btn--select{
+        width: 240px;
+    }
+    .advertise__feature{
+        padding-left: 106px;
+        text-align: center;
+    }
+    .btn{
+         min-width: 100px;
+         padding: 13px 25px;
+        }
+    .button-box{
+        padding: 5px;
+    }
+    .subcribe{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 35px;
+    }
+    .subcribe-des{
+        text-align: center;
+    }
+    .subcribe-des__des{
+        margin-bottom: 0;
+    }
+    .btn-contai{
+        text-align: center;
+        margin-top: 0;  
+    }
+    .footer-content{
+        display: none;
+    }
+    .footer-box{
+        text-align: center;
+    }
+    .footer-link{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .nextwork__img{
+        height: 150px;
+    }
+   
+}
+@media (max-width: 375px){
+    .header-logo{
+        margin-right: 60px;
+    }
+    .plan__head-subtitle {
+        margin-bottom: 0;
+    }
+   
+    .customer{
+        width: 350px;
+    }
+}  

@@ -335,12 +335,12 @@ input[name=checked-open]:checked ~ .navigation-box{
    padding: 10px;
    border-top: 1px solid var(--primary-color);
 }
-.btn-authe{
+.btn-logout{
     display: block;
     padding: 10px;
     width: 40px;
    border: 1px solid var(--primary-color);
-   margin-left: auto;
+   margin: 0 7px 0 auto;
    background-color: var(--primary-color);
    border-radius: 5px;
    color: var(--white-color);
@@ -756,13 +756,14 @@ input[name=checked-open]:checked ~ .navigation-box{
     right: 40px;
     border: 1px solid var(--primary-color);
     transition: all linear 0.3s;
+    z-index: 98;
+    background-color: var(--primary-color);
     display: none;
+    opacity: 0;
 }
 .btn-back.openScroll{
-    /* display: block; */
-}
-.btn-back:hover{
-    background-color: var(--primary-color);
+    display: block;
+    opacity: 1;
 }
 /* modal login */
 .modal{
@@ -911,3 +912,7 @@ input[name=checked-open]:checked ~ .navigation-box{
     color: var(--primary-color);
 }
 
+.notify-logout{
+    position: relative;
+    background-color: var(--white-color);
+}

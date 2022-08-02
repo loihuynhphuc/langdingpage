@@ -39,6 +39,50 @@
    .show-on-mobile-tablet{
        display: block;
    }
+   /* logout */
+   .notify-logout{
+    position: relative;
+    background-color: var(--white-color);
+    top:30px;
+    margin: 0 10px 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: slideRightIn linear 0.3s;
+    display: none;
+    }
+    .notify-logout__header{
+        background-color: #F53855;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    .notify-logout__comfirm{
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-comfirm{
+        flex-basis: 50%;
+        font-size: 1.5rem;
+        font-weight: 400;     
+        border-radius: unset;
+        transition: linear 0.2s; 
+        color: black;  
+    }
+    .btn-comfirm:hover{
+        background-color: aqua;
+    }
+    @keyframes slideRightIn {
+        from{
+            transform: translateX(350px);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 }
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px){
@@ -114,6 +158,10 @@
     }
     .nextwork__img{
         height: 150px;
+    }
+    .customer{
+        padding: 18px;
+        margin-right: 7px;
     }
    
 }

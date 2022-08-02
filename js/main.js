@@ -9,10 +9,36 @@ const btnSingInClose = $(".btn-login-close");
 const customerBox = $$(".customer");
 const btnSlides = $$(".btn-slide__item");
 const btnDropDowns = $$(".drop-down");
-console.log(btnDropDowns);
+const btnBackSroll = $(".btn-back");
+const btnLogOut = $(".btn-logout");
+const boxLogOut = $(".notify-logout");
+
 
 // import validator
 import handleFormLogin from "./validate.js"
+
+function handleBtnLogOut(){
+  btnLogOut.onclick = function(){
+    boxLogOut.style.display = "block";
+  }
+}
+
+function handleBtnScrollBack(valueScrollTop){
+  console.log(valueScrollTop);
+        if(valueScrollTop > 600){
+          btnBackSroll.classList.add("openScroll");   
+          btnBackSroll.onclick=function(){
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+          };        
+        }else{
+          btnBackSroll.classList.remove("openScroll");
+        }
+}
+
 
 function handleDropDown(){
       btnDropDowns.forEach(btnDropDown=>{
@@ -24,7 +50,6 @@ function handleDropDown(){
 }
 
 function changeActiveBtnSlide (currentIndex){
-  // console.log(currentIndex);
     btnSlides.forEach((btnSlide)=>{
           if(btnSlide.className==="btn-slide__item current-slide"){
               btnSlide.className ="btn-slide__item";
@@ -61,18 +86,22 @@ function handleBtnLogIn(){
 
 function handleHeaderStick(duration){
       window.onscroll= function(){
-          if(document.documentElement.scrollTop.toFixed()> 300){
+        const valueScrollTop = document.documentElement.scrollTop.toFixed();
+          if(valueScrollTop > 300){
               header.style.animation = `slideDown linear ${duration}s`;
                 header.classList.add("header-sticky");
-          }else if(document.documentElement.scrollTop.toFixed()< 200){
+          }else if(valueScrollTop < 200){
             header.style.animation = `slideTop linear ${duration}s`;
             header.classList.remove("header-sticky");
           }
+          handleBtnScrollBack(valueScrollTop);
       }
+      
 }
 
 
 function start(){
+  handleBtnLogOut();
   handleDropDown();
   handleFormLogin();
   handleBtnLogIn();
